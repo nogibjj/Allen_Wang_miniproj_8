@@ -33,14 +33,14 @@
 | **Fare**      | 32.30542018038331        |
 |------------------|----------------|
 | **statistic**      | std        |
-| **Survived**      | 0.4870041177510123        |
+| **Survived**      | 0.48700411775101243        |
 | **Pclass**      | 0.8366620036697731        |
 | **Name**      | None        |
 | **Sex**      | None        |
 | **Age**      | 14.12190840546256        |
 | **Siblings/Spouses Aboard**      | 1.10466855386757        |
 | **Parents/Children Aboard**      | 0.8074659070316833        |
-| **Fare**      | 49.782040400173905        |
+| **Fare**      | 49.78204040017391        |
 |------------------|----------------|
 | **statistic**      | min        |
 | **Survived**      | 0.0        |
@@ -98,7 +98,7 @@
 - **Age**: 29.471443066516347
 - **Siblings/Spouses Aboard**: 0.5253664036076663
 - **Parents/Children Aboard**: 0.3833145434047351
-- **Fare**: 32.305420180383315
+- **Fare**: 32.30542018038331
 
 ## Median Values:
 - **Survived**: 0.0
@@ -109,12 +109,12 @@
 - **Fare**: 14.4542
 
 ## Standard Deviation:
-- **Survived**: 0.4870041177510123
-- **Pclass**: 0.8366620036697732
+- **Survived**: 0.48700411775101243
+- **Pclass**: 0.8366620036697731
 - **Age**: 14.12190840546256
-- **Siblings/Spouses Aboard**: 1.1046685538675702
-- **Parents/Children Aboard**: 0.8074659070316832
-- **Fare**: 49.78204040017391
+- **Siblings/Spouses Aboard**: 1.10466855386757
+- **Parents/Children Aboard**: 0.8074659070316833
+- **Fare**: 49.782040400173905
 
 ## Distributions:
 ![Age Distribution](Age_distribution.png)
