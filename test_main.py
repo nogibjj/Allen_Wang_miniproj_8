@@ -1,9 +1,9 @@
 from main import (
     read_dataset,
-    #generate_report,
+    # generate_report,
     generate_summary_statistics,
-    measure_time_and_memory
-    #create_save_visualization,
+    measure_time_and_memory,
+    # create_save_visualization,
 )
 import polars as pl
 
@@ -45,14 +45,16 @@ def test_summary():
     assert (std_dev[0, "Parents/Children Aboard"] - 0.807465907) <= 10 ** (-6)
     assert (std_dev[0, "Fare"] - 49.7820404) <= 10 ** (-6)
 
+
 def test_time_memory_measure():
     file_path = (
         "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
     )
     df = read_dataset(file_path)
     elapsed_time, memory_used = measure_time_and_memory(df)
-    assert elapsed_time!=None
-    assert memory_used!=None
+    assert elapsed_time != None
+    assert memory_used != None
+
 
 # def test_visualization():
 #     file_path = (
@@ -78,5 +80,5 @@ if __name__ == "__main__":
     test_read()
     test_summary()
     test_time_memory_measure()
-    #test_visualization()
-    #test_report()
+    # test_visualization()
+    # test_report()
