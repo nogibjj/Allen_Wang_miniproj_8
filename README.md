@@ -91,11 +91,13 @@ The performance of the summary statistics generation was compared between Python
 - **Python (using the Polar package)**:
   - **Time:** 5.76 ms
   - **Memory Usage:** 5240 KB
+  
   ![Alt text](python.png)
 
 - **Rust (using basic sorting and mathematical functions)**:
   - **Time:** 4.55 ms
   - **Memory Usage:** 0 KB
+  
   ![Alt text](rust.png)
 
 ### Analysis
