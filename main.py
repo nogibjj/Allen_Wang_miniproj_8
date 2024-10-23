@@ -3,6 +3,7 @@ import polars.selectors as cs
 import time
 from memory_profiler import memory_usage
 
+
 def read_dataset(file_path):
     df = None
     if file_path.endswith(".csv"):
@@ -10,6 +11,7 @@ def read_dataset(file_path):
     elif file_path.endswith(".xlsx"):
         df = pl.read_excel(file_path)  # Polars supports Excel reading
     return df
+
 
 def generate_summary_statistics(df):
     # Using polars to generate summary statistics
@@ -21,6 +23,7 @@ def generate_summary_statistics(df):
     std_dev = df.select(pl.all().std())
     return summary, mean_values, median_values, std_dev
 
+
 def measure_time_and_memory(df):
     mem_before = memory_usage()[0]
     start_time = time.time()
@@ -29,15 +32,16 @@ def measure_time_and_memory(df):
 
     end_time = time.time()
     mem_after = memory_usage()[0]
-        
+
     # Calculate elapsed time and memory used
-    elapsed_time = (end_time - start_time)* 1000
+    elapsed_time = (end_time - start_time) * 1000
     memory_used = mem_after - mem_before
-    
+
     # Return the result along with time and memory usage
     print(f"Elapsed time: {elapsed_time:.2f} ms")
     print(f"Memory used: {memory_used * 1024:.2f} KB")
     return elapsed_time, memory_used * 1024 
+
 
 # def create_save_visualization(df, column_name, save_filename=None, show=False):
 #     sns.set_theme(style="whitegrid")
