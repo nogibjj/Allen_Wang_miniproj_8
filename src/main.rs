@@ -120,8 +120,8 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     // Print statistics
     println!("Elapsed time: {:.2?}", duration);
-    println!("Memory used: {:.2} MB", used_memory as f64 / (1024.0 * 1024.0)); // Converts used_memory from bytes to MB
-    println!("Initial memory: {} MB", initial_memory.total as f64 / 1024.0); // Converts total memory from KB to MB
-    println!("Final memory: {} MB", final_memory.total as f64 / 1024.0); // Converts total memory from KB to MB
+    println!("Memory used: {:.2} KB", used_memory );
+    println!("Initial memory: {} KB", initial_memory.total); 
+    println!("Final memory: {} KB", final_memory.total); 
     Ok(())
 }
