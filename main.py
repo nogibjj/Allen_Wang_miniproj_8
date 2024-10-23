@@ -40,7 +40,7 @@ def measure_time_and_memory(df):
     # Return the result along with time and memory usage
     print(f"Elapsed time: {elapsed_time:.2f} ms")
     print(f"Memory used: {memory_used * 1024:.2f} KB")
-    return elapsed_time, memory_used * 1024 
+    return elapsed_time, memory_used * 1024
 
 
 # def create_save_visualization(df, column_name, save_filename=None, show=False):
