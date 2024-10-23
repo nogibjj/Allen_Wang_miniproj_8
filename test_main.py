@@ -1,10 +1,10 @@
 from main import (
     read_dataset,
-    generate_report,
+    #generate_report,
     generate_summary_statistics,
-    create_save_visualization,
+    measure_time_and_memory
+    #create_save_visualization,
 )
-import os
 import polars as pl
 
 
@@ -45,29 +45,38 @@ def test_summary():
     assert (std_dev[0, "Parents/Children Aboard"] - 0.807465907) <= 10 ** (-6)
     assert (std_dev[0, "Fare"] - 49.7820404) <= 10 ** (-6)
 
-
-def test_visualization():
+def test_time_memory_measure():
     file_path = (
         "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
     )
     df = read_dataset(file_path)
-    for column in df.columns:
-        column_name = column.replace("/", "_")
-        create_save_visualization(df, column, column_name + "_distribution.png")
-        assert os.path.isfile(column_name + "_distribution.png")
+    elapsed_time, memory_used = measure_time_and_memory(df)
+    assert elapsed_time!=0
+    assert memory_used!=0
+
+# def test_visualization():
+#     file_path = (
+#         "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
+#     )
+#     df = read_dataset(file_path)
+#     for column in df.columns:
+#         column_name = column.replace("/", "_")
+#         create_save_visualization(df, column, column_name + "_distribution.png")
+#         assert os.path.isfile(column_name + "_distribution.png")
 
 
-def test_report():
-    file_path = (
-        "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
-    )
-    df = read_dataset(file_path)
-    generate_report(df, "Titanic Profiling Report")
-    assert os.path.isfile("Titanic Profiling Report.md")
+# def test_report():
+#     file_path = (
+#         "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
+#     )
+#     df = read_dataset(file_path)
+#     generate_report(df, "Titanic Profiling Report")
+#     assert os.path.isfile("Titanic Profiling Report.md")
 
 
 if __name__ == "__main__":
     test_read()
     test_summary()
-    test_visualization()
-    test_report()
+    test_time_memory_measure()
+    #test_visualization()
+    #test_report()

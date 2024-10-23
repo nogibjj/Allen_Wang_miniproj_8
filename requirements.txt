@@ -11,6 +11,5 @@ pylint==2.15.3
 #uvicorn==0.18.3
 
 polars
-seaborn
-matplotlib
 tabulate
+memory_profiler
