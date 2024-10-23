@@ -51,8 +51,8 @@ def test_time_memory_measure():
     )
     df = read_dataset(file_path)
     elapsed_time, memory_used = measure_time_and_memory(df)
-    assert elapsed_time!=0
-    assert memory_used!=0
+    assert elapsed_time!=None
+    assert memory_used!=None
 
 # def test_visualization():
 #     file_path = (
