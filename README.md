@@ -1,7 +1,7 @@
 # Allen_Wang_miniproj_8
 
 [![CI](https://github.com/nogibjj/Allen_Wang_miniproj_8/actions/workflows/CICD.yml/badge.svg)](https://github.com/nogibjj/Allen_Wang_miniproj_8/actions/workflows/CICD.yml)
-
+[![CI](https://github.com/nogibjj/Allen_Wang_miniproj_8/actions/workflows/rust_CICD.yml/badge.svg)](https://github.com/nogibjj/Allen_Wang_miniproj_8/actions/workflows/rust_CICD.yml)
 ## Overview
 
 This project includes a Python development environment configured with a `.devcontainer`, a `Makefile` for managing setup, testing, and linting tasks, and a functioning CI/CD pipeline. The project reads a dataset (CSV or Excel) and generates summary statistics in both Python and Rust to compare time and memory usage.
