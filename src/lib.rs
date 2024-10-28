@@ -1,9 +1,7 @@
 use csv::ReaderBuilder;
 use ndarray::{Array2, Axis,Array1};
-use reqwest;
 use std::error::Error;
 use std::io::Cursor;
-use tokio;
 use ndarray::s;
 pub async fn read_dataset(file_path: &str) -> Result<Array2<f64>, Box<dyn Error>> {
     // Check if the path is a URL
@@ -78,7 +76,7 @@ pub fn generate_summary_statistics(data: &Array2<f64>)-> (Array1<f64>, Array1<f6
     let medians: Array1<f64> = (0..data.ncols())
         .map(|i| {
             let col = sorted_data.slice(s![.., i]);
-            if col.len() == 0 {
+            if col.is_empty() {
                 return 0.0; // or handle the case as appropriate
             }
             if nrows % 2 == 0 {
