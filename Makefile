@@ -1,13 +1,27 @@
 install: 
 	pip install --upgrade pip && pip install -r requirements.txt 
 
-format: 
+python_format: 
 	black *.py
 
-lint:
+python_lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py $(wildcard *.py)
 
-test: 
+python_test: 
 	python -m pytest -cov=main test_main.py --disable-warnings
 
-all: install format lint test
+
+rust_format: 
+	cargo fmt
+
+rust_lint:
+	cargo clippy -- -D warnings
+
+rust_test: 
+	cargo test
+
+rust_run:
+	cargo run
+
+release:
+	cargo build --release
