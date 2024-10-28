@@ -27,7 +27,7 @@ mod tests {
         // Call the read_dataset function and assert the result
         let data = read_dataset(file_path).await?;
         
-        let (mean,median,std_dev) = generate_summary_statistics(&data)
+        let (mean,median,std_dev) = generate_summary_statistics(&data);
 
         assert!(mean.shape()[0] > 0);
         assert!(median.shape()[0] > 0);

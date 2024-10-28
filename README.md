@@ -19,10 +19,9 @@ This project includes a Python development environment configured with a `.devco
 
 - **Makefile**: Provides commands for setup, testing, and linting:
   - `make install`: Installs project dependencies.
-  - `make format`: Formats all Python files in the current directory using Black.
-  - `make lint`: Lints all Python files (excluding test files) using Pylint.
-  - `make test`: Runs tests.
-  - `make all`: Runs all tasks in sequence.
+  - `make python_format`: Formats all Python files in the current directory using Black.
+  - `make python_lint`: Lints all Python files (excluding test files) using Pylint.
+  - `make python_test`: Runs python tests.
 
 - **.github/workflows/ci.yml**: Configures the CI/CD pipeline to automatically run setup, linting, and tests.
 
@@ -50,25 +49,25 @@ This project includes a Python development environment configured with a `.devco
 3. **Format code:**
 
     ```bash
-    make format
+    make python_format
     ```
 
 4. **Lint code:**
 
     ```bash
-    make lint
+    make python_lint
     ```
 
 5. **Test code:**
 
     ```bash
-    make test
+    make python_test
     ```
 
 6. **Build Rust:**
 
     ```bash
-    cargo build
+    make release
     ```
 
 ## Data Analysis Script
@@ -89,8 +88,8 @@ The Python script in `main.py` and the Rust script in `src/main.rs` can perform 
 The performance of the summary statistics generation was compared between Python and Rust, yielding the following results:
 
 - **Python (using the Polar package)**:
-  - **Time:** 5.76 ms
-  - **Memory Usage:** 5240 KB
+  - **Time:** 31.96 ms
+  - **Memory Usage:** 4416 KB
   
   ![Alt text](python.png)
 

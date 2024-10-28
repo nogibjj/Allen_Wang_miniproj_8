@@ -100,8 +100,8 @@ def measure_time_and_memory(df):
 #         file.write("![Age Distribution](Age_distribution.png)\n\n")
 #         file.write("![Fare Distribution](Fare_distribution.png)\n\n")
 #         file.write("![Pclass Distribution](Pclass_distribution.png)\n")
-# file_path = (
-#     "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
-# )
-# df = read_dataset(file_path)
-# elapsed_time, memory_used = measure_time_and_memory(df)
+file_path = (
+    "https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv"
+)
+df = read_dataset(file_path)
+elapsed_time, memory_used = measure_time_and_memory(df)
