@@ -32,6 +32,8 @@ mod tests {
         assert!(mean.shape()[0] > 0);
         assert!(median.shape()[0] > 0);
         assert!(std_dev.shape()[0] > 0);
+
+        Ok(())
     }
 
 }
