@@ -1,6 +1,5 @@
 use data_analysis::{read_dataset, generate_summary_statistics};
 use std::error::Error;
-use sys_info;
 use tokio::time::Instant;
 
 #[tokio::main]
